@@ -1,20 +1,18 @@
-// import { useState } from "react";
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import "./App.css";
-import HomeCard from "./components/HomeCard";
+import HomeCard from "./Home/HomeCard";
 import Products from "./components/Products/Products";
 import Header from "./components/Header/Header";
+import { useState } from "react";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <div className="min-h-screen">
       <Header />
 
-      <HomeCard />
-      <Products />
+      <HomeCard count={count} />
+      <Products count={count} setCount={setCount} />
     </div>
   );
 }

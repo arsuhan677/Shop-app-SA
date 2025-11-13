@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function Products() {
-  const [cart, setCart] = useState([])
+export default function Products({count, setCount}) {
+  // const [cart, setCart, ] = useState([])
+  // const [cartCount, setCartCount] = useState([])
+  
 
   const Products = [
     {
@@ -48,25 +50,11 @@ export default function Products() {
     },
   ]
 
-  const addToCart = (product) => {
-
-    // check if product already in cart
-    const exists = cart.find((item) => item.id === product.id);
-    if (exists) {
-      // increase quantity if already in cart
-      setCart(
-        cart.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-        )
-      );
-    } else {
-      // add new product with quantity 1
-      setCart([...cart, { ...product, quantity: 1 }]);
-    }
-
-    console.log(addToCart);
-
+  const addToCart = () => {
+      setCount(count + 1)
   }
+
+
   return (
     <div className="container mx-auto px-3 sm:px-1">
       <div className="gap-3 sm:gap-6 grid grid-cols-2 sm:grid-cols-3 mt-16">
@@ -88,7 +76,7 @@ export default function Products() {
             {/* <button className="border py-2 text-black font-semibold cursor-pointer w-full rounded-xl">
               Add to Cart
             </button> */}
-            <button onClick={() => addToCart(product)} className="border py-3 bg-cyan-600 text-black font-semibold cursor-pointer hover:bg-cyan-400 w-full rounded-xl">
+            <button onClick={addToCart} className="border py-3 bg-cyan-600 text-black font-semibold cursor-pointer hover:bg-cyan-400 w-full rounded-xl">
               Add to Cart
             </button>
           </div>

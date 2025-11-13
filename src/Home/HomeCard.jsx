@@ -1,6 +1,8 @@
 import React from "react";
 
-export default function HomeCard() {
+export default function HomeCard({count}) {
+
+
   return (
     <div className="">
       {/* <div className='container mx-auto bg-gray-800 py-30 mt-8 rounded-xl border border-gray-400'> */}
@@ -20,7 +22,7 @@ export default function HomeCard() {
 
           <div className="bg-cyan-500 hover:bg-cyan-400 cursor-pointer py-3 px-6 rounded-2xl flex items-center space-x-4">
             <h3 className="text-xl font-semibold text-black">View cart</h3>
-            <p className="bg-gray-800 py-1 px-3 rounded-xl font-semibold"><span>0</span> items</p>
+            <p className="bg-gray-800 py-1 px-3 rounded-xl font-semibold"><span>{count}</span> items</p>
           </div>
         </div>
       </div>
