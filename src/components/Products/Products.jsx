@@ -8,45 +8,65 @@ export default function Products() {
       id: 1,
       name: "Winter Jacket",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "",
+      price: "20.02",
       images: "/images/winter.jpeg"
     },
     {
       id: 2,
       name: "KeyBoard",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "",
+      price: "10.06",
       images: "/images/keyboard.jpeg"
     },
     {
       id: 3,
       name: "T-Shirt",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "",
+      price: "10.07",
       images: "/images/tshirt.jpeg"
     },
     {
       id: 4,
       name: "Leptop HP",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "",
+      price: "30.06",
       images: "/images/download.jpeg"
     },
     {
       id: 3,
       name: "T-Shirt",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "",
+      price: "40.1",
       images: "/images/tshirt.jpeg"
     },
     {
       id: 1,
       name: "Winter Jacket",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "",
+      price: "50.03",
       images: "/images/winter.jpeg"
     },
   ]
+
+  const addToCart = (product) => {
+
+    // check if product already in cart
+    const exists = cart.find((item) => item.id === product.id);
+    if (exists) {
+      // increase quantity if already in cart
+      setCart(
+        cart.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        )
+      );
+    } else {
+      // add new product with quantity 1
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
+
+    console.log(addToCart);
+
+  }
   return (
     <div className="container mx-auto px-3 sm:px-1">
       <div className="gap-3 sm:gap-6 grid grid-cols-2 sm:grid-cols-3 mt-16">
@@ -61,14 +81,14 @@ export default function Products() {
             <h2 className="uppercase text-gray-300 mb-2">{product.name}</h2>
             <h2 className="text-2xl font-semibold mb-2 text-ellipsis line-clamp-1">{product.name}</h2>
             <p className="text-[16px] text-gray-400 mb-4 hidden sm:block">{product.description}</p>
-            <p className="text-2xl font-semibold text-cyan-400 mb-6">{product.price}</p>
+            <p className="text-2xl font-semibold text-cyan-400 mb-6">$ {product.price}</p>
           </div>
           <p className="mb-2">Quantity</p>
           <div>
             {/* <button className="border py-2 text-black font-semibold cursor-pointer w-full rounded-xl">
               Add to Cart
             </button> */}
-            <button className="border py-3 bg-cyan-600 text-black font-semibold cursor-pointer hover:bg-cyan-400 w-full rounded-xl">
+            <button onClick={() => addToCart(product)} className="border py-3 bg-cyan-600 text-black font-semibold cursor-pointer hover:bg-cyan-400 w-full rounded-xl">
               Add to Cart
             </button>
           </div>
