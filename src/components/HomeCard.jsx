@@ -4,7 +4,7 @@ export default function HomeCard() {
   return (
     <div className="">
       {/* <div className='container mx-auto bg-gray-800 py-30 mt-8 rounded-xl border border-gray-400'> */}
-      <div className="mt-16">
+      <div className="mt-16 px-3 sm:px-0">
         <div className="container mx-auto flex flex-col rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6 shadow-2xl shadow-slate-950/50 sm:flex-row sm:items-center sm:justify-between">
           <div className="py-4">
             <h2 className="text-[18px] uppercase text-gray-400 tracking-[0.25em]">

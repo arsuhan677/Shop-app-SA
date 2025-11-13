@@ -48,11 +48,11 @@ export default function Products() {
     },
   ]
   return (
-    <div className="container mx-auto">
-      <div className="gap-6 grid grid-cols-3 mt-16">
+    <div className="container mx-auto px-3 sm:px-1">
+      <div className="gap-3 sm:gap-6 grid grid-cols-2 sm:grid-cols-3 mt-16">
       {Products.map((product) => (
-        <div className="bg-gray-900 items-center rounded-xl overflow-hidden">
-          <img className="w-full h-60 object-cover transform transition-all duration-500 group-hover:translate-y-2 group-hover:scale-110 "
+        <div className="bg-gray-900 items-center rounded-xl overflow-hidden xs:h-100">
+          <img className="w-full h-40 sm:h-60 object-cover transform transition-all duration-500 group-hover:translate-y-2 group-hover:scale-110 "
             src={product.images}
             alt=""
           />
@@ -60,7 +60,7 @@ export default function Products() {
             <div key={product.id}>
             <h2 className="uppercase text-gray-300 mb-2">{product.name}</h2>
             <h2 className="text-2xl font-semibold mb-2">{product.name}</h2>
-            <p className="text-[16px] text-gray-400 mb-4">Hand-glazed stoneware mug inspired by the northern lights.</p>
+            <p className="text-[16px] text-gray-400 mb-4 hidden sm:block">{product.description}</p>
             <p className="text-2xl font-semibold text-cyan-400 mb-6">{product.price}</p>
           </div>
           <p className="mb-2">Quantity</p>
