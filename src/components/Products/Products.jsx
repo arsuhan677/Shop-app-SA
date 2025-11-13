@@ -57,7 +57,7 @@ export default function Products({count, setCount}) {
 
   return (
     <div className="container mx-auto px-3 sm:px-1">
-      <div className="gap-3 sm:gap-6 grid grid-cols-2 sm:grid-cols-3 mt-16">
+      <div className="gap-3 sm:gap-6 grid grid-cols-2 sm:grid-cols-3 sm:mt-16 mt-12">
       {Products.map((product) => (
         <div className="bg-gray-900 items-center rounded-xl overflow-hidden xs:h-100">
           <img className="w-full h-40 sm:h-60 object-cover transform transition-all duration-500 group-hover:translate-y-2 group-hover:scale-110 "
@@ -67,16 +67,16 @@ export default function Products({count, setCount}) {
           <div className="p-4">
             <div key={product.id}>
             <h2 className="uppercase text-gray-300 mb-2">{product.name}</h2>
-            <h2 className="text-2xl font-semibold mb-2 text-ellipsis line-clamp-1">{product.name}</h2>
+            <h2 className="sm:text-2xl text-xl font-semibold mb-2 text-ellipsis line-clamp-1">{product.name}</h2>
             <p className="text-[16px] text-gray-400 mb-4 hidden sm:block">{product.description}</p>
-            <p className="text-2xl font-semibold text-cyan-400 mb-6">$ {product.price}</p>
+            <p className="sm:text-2xl text-xl font-semibold text-cyan-400 sm:mb-6 mb-3">$ {product.price}</p>
           </div>
           <p className="mb-2">Quantity</p>
           <div>
             {/* <button className="border py-2 text-black font-semibold cursor-pointer w-full rounded-xl">
               Add to Cart
             </button> */}
-            <button onClick={addToCart} className="border py-3 bg-cyan-600 text-black font-semibold cursor-pointer hover:bg-cyan-400 w-full rounded-xl">
+            <button onClick={addToCart} className="border py-2.5 sm:py-3 bg-cyan-500 text-black font-semibold cursor-pointer hover:bg-cyan-400 w-full rounded-xl">
               Add to Cart
             </button>
           </div>
