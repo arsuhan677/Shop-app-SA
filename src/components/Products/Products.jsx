@@ -59,7 +59,7 @@ export default function Products() {
           <div className="p-4">
             <div key={product.id}>
             <h2 className="uppercase text-gray-300 mb-2">{product.name}</h2>
-            <h2 className="text-2xl font-semibold mb-2">{product.name}</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-ellipsis line-clamp-1">{product.name}</h2>
             <p className="text-[16px] text-gray-400 mb-4 hidden sm:block">{product.description}</p>
             <p className="text-2xl font-semibold text-cyan-400 mb-6">{product.price}</p>
           </div>
