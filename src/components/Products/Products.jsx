@@ -1,6 +1,8 @@
 import React from "react";
+// import { useNavigate } from "react-router";
 
 export default function Products({count, setCount}) {
+  // const naviga = useNavigate()
   // const [cart, setCart, ] = useState([])
   // const [cartCount, setCartCount] = useState([])
   
@@ -48,6 +50,20 @@ export default function Products({count, setCount}) {
       price: "50.03",
       images: "/images/winter.jpeg"
     },
+    {
+      id: 4,
+      name: "Leptop HP",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+      price: "30.06",
+      images: "/images/download.jpeg"
+    },
+    {
+      id: 3,
+      name: "T-Shirt",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+      price: "10.07",
+      images: "/images/tshirt.jpeg"
+    },
   ]
 
   const addToCart = () => {
@@ -57,19 +73,19 @@ export default function Products({count, setCount}) {
 
   return (
     <div className="container mx-auto px-3 sm:px-1">
-      <div className="gap-3 sm:gap-6 grid grid-cols-2 sm:grid-cols-3 sm:mt-16 mt-12">
+      <div className="gap-3 sm:gap-6 grid grid-cols-2 sm:grid-cols-4 sm:mt-16 mt-12">
       {Products.map((product) => (
         <div className="bg-gray-900 items-center rounded-xl overflow-hidden xs:h-100">
-          <img className="w-full h-40 sm:h-60 object-cover transform transition-all duration-500 group-hover:translate-y-2 group-hover:scale-110 "
+          <img className="w-full h-40 sm:h-60 object-cover hover:scale-110 transition-all duration-500 group-hover:translate-y-2 group-hover:scale-110 "
             src={product.images}
-            alt=""
+            alt="productImg"
           />
           <div className="p-4">
             <div key={product.id}>
-            <h2 className="uppercase text-gray-300 mb-2">{product.name}</h2>
+            <h2 className="uppercase sm:text-lg text-sm text-gray-300 mb-2">{product.name}</h2>
             <h2 className="sm:text-2xl text-xl font-semibold mb-2 text-ellipsis line-clamp-1">{product.name}</h2>
             <p className="text-[16px] text-gray-400 mb-4 hidden sm:block">{product.description}</p>
-            <p className="sm:text-2xl text-xl font-semibold text-cyan-400 sm:mb-6 mb-3">$ {product.price}</p>
+            <p className="sm:text-2xl text-xl font-semibold text-cyan-400 sm:mb-3 mb-3">$ {product.price}</p>
           </div>
           <p className="mb-2">Quantity</p>
           <div>

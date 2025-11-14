@@ -1,20 +1,31 @@
-import React from "react";
+// import { useEffect, useState } from "react";
+// import Products from "./Products";
 
-const CartPage = () => {
-  return (
-    <div className="p-6">
-      <h1 className="text-3xl font-semibold mb-4">
-        Your Cart ({cartItems.length} items)
-      </h1>
+// export default function Cart({cartproduct, setCartProduct}) {
+//   const [cartproduct, setCartProduct] = useState([]);
 
-      {/* {cartItems.map((item, index) => ( */}
-        <div key={index} className="border p-4 rounded-xl bg-slate-800/40 mb-3">
-          <h2 className="text-xl font-semibold">{item.name}</h2>
-          <p className="text-gray-300">Price: {item.price}</p>
-        </div>
-      {/* ))} */}
-    </div>
-  );
-};
+//   useEffect(() => {
+//     const items = JSON.parse(localStorage.getItem("cart")) || [];
+//     setCartItems(Products);
+//   }, []);
 
-export default CartPage;
+//   return (
+//     <div className="p-6">
+//       <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
+
+//       {cartproduct.length === 0 ? (
+//         <p>No products added yet!</p>
+//       ) : (
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//           {Products.map((product) => (
+//             <div key={product} className="border p-4 rounded">
+//               <img src={product.image} alt="" className="w-full h-40 object-cover" />
+//               <h3 className="font-semibold mt-2">{product.name}</h3>
+//               <p className="text-gray-700">Price: ${product.price}</p>
+//             </div>
+//           ))}
+//         </div>
+//       )}
+//     </div>
+//   );
+// }

@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 export default function HomeCard({ count }) {
+
+  const navigate = useNavigate()
+
   return (
     <div className="">
       {/* <div className='container mx-auto bg-gray-800 py-30 mt-8 rounded-xl border border-gray-400'> */}
@@ -18,7 +22,7 @@ export default function HomeCard({ count }) {
             </p>
           </div>
 
-          <div className="bg-cyan-400 hover:bg-cyan-500 cursor-pointer py-3 sm:py-3.5 px-6 rounded-2xl">
+          <div onClick={() => navigate("/cart")} className="bg-cyan-400 hover:bg-cyan-500 cursor-pointer py-3 sm:py-3.5 px-6 rounded-2xl">
             <div className="flex items-center space-x-4 justify-center">
               <h3 className="text-xl font-semibold text-black">View cart</h3>
               <p className="bg-gray-800 py-1 px-3 rounded-xl font-semibold">
