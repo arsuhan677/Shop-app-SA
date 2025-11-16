@@ -1,74 +1,82 @@
 import React from "react";
-// import { useNavigate } from "react-router";
 
 export default function Products({count, setCount}) {
-  // const naviga = useNavigate()
-  // const [cart, setCart, ] = useState([])
-  // const [cartCount, setCartCount] = useState([])
-  
+
+  const addToCart = (product) => {
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.push(product);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  setCount(count + 1);
+};
 
   const Products = [
     {
       id: 1,
       name: "Winter Jacket",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "20.02",
+      price: "25000",
       images: "/images/winter.jpeg"
     },
     {
       id: 2,
       name: "KeyBoard",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "10.06",
+      price: "840",
       images: "/images/keyboard.jpeg"
     },
     {
       id: 3,
       name: "T-Shirt",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "10.07",
+      price: "550",
       images: "/images/tshirt.jpeg"
     },
     {
       id: 4,
       name: "Leptop HP",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "30.06",
+      price: "230",
       images: "/images/download.jpeg"
     },
     {
-      id: 3,
+      id: 5,
       name: "T-Shirt",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "40.1",
+      price: "340",
       images: "/images/tshirt.jpeg"
     },
     {
-      id: 1,
+      id: 6,
       name: "Winter Jacket",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "50.03",
+      price: "25000",
       images: "/images/winter.jpeg"
     },
     {
-      id: 4,
-      name: "Leptop HP",
+      id: 7,
+      name: "KeyBoard",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "30.06",
-      images: "/images/download.jpeg"
+      price: "840",
+      images: "/images/keyboard.jpeg"
     },
     {
-      id: 3,
+      id: 8,
       name: "T-Shirt",
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
-      price: "10.07",
+      price: "550",
       images: "/images/tshirt.jpeg"
     },
+    
+    
   ]
 
-  const addToCart = () => {
-      setCount(count + 1)
-  }
+  // const addToCart = () => {
+  //     setCount(count + 1)
+  // }
 
 
   return (
@@ -78,7 +86,7 @@ export default function Products({count, setCount}) {
         <div className="bg-gray-900 items-center rounded-xl overflow-hidden xs:h-100">
           <img className="w-full h-40 sm:h-60 object-cover hover:scale-110 transition-all duration-500 group-hover:translate-y-2 group-hover:scale-110 "
             src={product.images}
-            alt="productImg"
+            alt={product.name}
           />
           <div className="p-4">
             <div key={product.id}>
@@ -92,7 +100,7 @@ export default function Products({count, setCount}) {
             {/* <button className="border py-2 text-black font-semibold cursor-pointer w-full rounded-xl">
               Add to Cart
             </button> */}
-            <button onClick={addToCart} className="border py-2.5 sm:py-3 bg-cyan-500 text-black font-semibold cursor-pointer hover:bg-cyan-400 w-full rounded-xl">
+            <button onClick={() => addToCart(product)} className="border py-2.5 sm:py-3 bg-cyan-500 text-black font-semibold cursor-pointer hover:bg-cyan-400 w-full rounded-xl">
               Add to Cart
             </button>
           </div>

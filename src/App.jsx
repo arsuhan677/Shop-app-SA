@@ -10,12 +10,12 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* <Header /> */}
 
       <HomeCard count={count} />
       <Products count={count} setCount={setCount} />
       <div className="mt-20">
-        <Fotter />
+        {/* <Fotter /> */}
       </div>
     </div>
   );
