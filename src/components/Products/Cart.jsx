@@ -27,6 +27,17 @@ export default function Cart() {
     0
   );
 
+  // Delete function
+  const deleteProduct = (index) => {
+    const updated = [...cartProducts];
+    updated.splice(index, 1);
+    setCartProducts(updated)
+    localStorage.setItem("cart", JSON.stringify(updated))
+    
+    console.log(deleteProduct);
+  }  
+  
+
   return (
     <div className="p-6 container mx-auto flex flex-col lg:flex-row gap-6">
       {/* Cart Items */}
@@ -59,7 +70,10 @@ export default function Cart() {
                   ৳ {product.price * product.quantity}
                 </p>
                 <div>
-                  <button className="bg-red-400 py-1 px-2 rounded-sm cursor-pointer hover:bg-red-500">
+                  <button
+                    onClick={() => deleteProduct(index)}
+                    className="bg-red-400 py-1 px-2 rounded-sm cursor-pointer hover:bg-red-500"
+                  >
                     Delete
                   </button>
                 </div>
@@ -73,7 +87,9 @@ export default function Cart() {
                 >
                   -
                 </button>
-                <span className="px-4 py-1 border border-gray-800 hover:border-gray-500">{product.quantity}</span>
+                <span className="px-4 py-1 border border-gray-800 hover:border-gray-500">
+                  {product.quantity}
+                </span>
                 <button
                   onClick={() => updateQuantity(index, "increment")}
                   className="bg-gray-300 hover:bg-gray-400 cursor-pointer text-black px-3 py-1 rounded"
