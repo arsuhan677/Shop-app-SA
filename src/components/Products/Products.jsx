@@ -100,7 +100,7 @@ export default function Products({ count, setCount }) {
                 <h2 className="sm:text-xl text-xl font-semibold mb-2 text-ellipsis line-clamp-1">
                   {product.name}
                 </h2>
-                <p className="text-[16px] text-gray-400 mb-4 hidden sm:block">
+                <p className="sm:text-[14px] text-gray-400 mb-4 hidden sm:block">
                   {product.description}
                 </p>
               </div>

@@ -14,15 +14,15 @@ export default function HomeCard({ count }) {
             <h2 className="text-[18px] uppercase text-gray-400 tracking-[0.25em]">
               Curated objects
             </h2>
-            <h1 className="text-3xl sm:text-4xl font-semibold py-2">Lumen Supply Co.</h1>
-            <p className="sm:text-[18px] text-[16px] text-gray-300 py-2">
+            <h1 className="text-3xl sm:text-3xl font-semibold py-2">Lumen Supply Co.</h1>
+            <p className="sm:text-[16px] text-[14px] text-gray-300 py-2">
               Discover daily essentials crafted by independent makers. Add what
               you love to <br  /> your cart and keep shopping—your picks stay
               saved thanks to local storage.
             </p>
           </div>
 
-          <div onClick={() => navigate("/cart")} className="bg-cyan-400 hover:bg-cyan-500 cursor-pointer py-3 sm:py-3.5 px-6 rounded-2xl">
+          <div onClick={() => navigate("/cart")} className="bg-cyan-400 hover:bg-cyan-500 cursor-pointer py-3 sm:py-3 px-6 rounded-xl">
             <div className="flex items-center space-x-4 justify-center">
               <h3 className="text-xl font-semibold text-black">View cart</h3>
               <p className="bg-gray-800 py-1 px-3 rounded-xl font-semibold">
