@@ -112,22 +112,15 @@ export default function Cart() {
         </div>
         <div className="flex justify-between">
           <span>Shipping Fee</span>
-          <span>৳ 0</span>
+          <span>Free</span>
         </div>
-        <input
-          type="text"
-          placeholder="Enter Voucher Code"
-          className="border px-3 py-2 w-full rounded"
-        />
-        <button className="bg-blue-500 text-white w-full py-2 rounded mt-2">
-          Apply
-        </button>
+        <div className="border-2"></div>
         <div className="flex justify-between font-bold text-lg mt-4">
           <span>Total</span>
           <span>৳ {subtotal}</span>
         </div>
-        <button className="bg-orange-500 text-white w-full py-2 rounded">
-          PROCEED TO CHECKOUT ({cartProducts.length})
+        <button className="bg-blue-500 hover:bg-blue-600 text-white w-full py-2 rounded mt-2 cursor-pointer">
+          Order Now
         </button>
       </div>
     </div>
