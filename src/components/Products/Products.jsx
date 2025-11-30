@@ -88,7 +88,7 @@ export default function Products({ count, setCount }) {
         {Products.map((product) => (
           <div className="bg-gray-900 items-center rounded-lg overflow-hidden xs:h-100">
             <img
-              className="w-full h-40 sm:h-55 object-cover hover:scale-110 transition-all duration-500 group-hover:translate-y-2 group-hover:scale-110 "
+              className="w-full h-40 sm:h-40 object-cover hover:scale-110 transition-all duration-500 group-hover:translate-y-2 group-hover:scale-110 "
               src={product.images}
               alt={product.name}
             />

@@ -22,7 +22,7 @@ export default function HomeCard({ count }) {
             </p>
           </div>
 
-          <div onClick={() => navigate("/cart")} className="bg-cyan-400 hover:bg-cyan-500 cursor-pointer py-3 sm:py-3 px-6 rounded-xl">
+          <div onClick={() => navigate("/cart")} className="bg-cyan-400 hover:bg-cyan-500 cursor-pointer py-3 sm:py-2 px-6 rounded-xl">
             <div className="flex items-center space-x-4 justify-center">
               <h3 className="text-xl font-semibold text-black">View cartt</h3>
               <p className="bg-gray-800 py-1 px-3 rounded-xl font-semibold">
