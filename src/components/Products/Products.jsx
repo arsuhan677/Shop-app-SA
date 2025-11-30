@@ -16,7 +16,7 @@ export default function Products({ count, setCount }) {
       id: 1,
       name: "Winter Jacket",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.",
       price: "25",
       images: "/images/winter.jpeg",
     },
@@ -24,7 +24,7 @@ export default function Products({ count, setCount }) {
       id: 2,
       name: "KeyBoard",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.",
       price: "40",
       images: "/images/keyboard.jpeg",
     },
@@ -32,7 +32,7 @@ export default function Products({ count, setCount }) {
       id: 3,
       name: "T-Shirt",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.",
       price: "50",
       images: "/images/tshirt.jpeg",
     },
@@ -40,7 +40,7 @@ export default function Products({ count, setCount }) {
       id: 4,
       name: "Leptop HP",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.",
       price: "80",
       images: "/images/download.jpeg",
     },
@@ -48,7 +48,7 @@ export default function Products({ count, setCount }) {
       id: 5,
       name: "T-Shirt",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.",
       price: "15",
       images: "/images/tshirt.jpeg",
     },
@@ -56,7 +56,7 @@ export default function Products({ count, setCount }) {
       id: 6,
       name: "Winter Jacket",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.",
       price: "20",
       images: "/images/winter.jpeg",
     },
@@ -64,7 +64,7 @@ export default function Products({ count, setCount }) {
       id: 7,
       name: "KeyBoard",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.",
       price: "35",
       images: "/images/keyboard.jpeg",
     },
@@ -72,7 +72,7 @@ export default function Products({ count, setCount }) {
       id: 8,
       name: "T-Shirt",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, et.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus.",
       price: "25",
       images: "/images/tshirt.jpeg",
     },
