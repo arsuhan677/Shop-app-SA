@@ -1,7 +1,7 @@
 import "./App.css";
 import HomeCard from "./Home/HomeCard";
 import Products from "./components/Products/Products";
-import Header from "./components/Header/Header";
+// import Header from "./components/Header/Header";
 import { useState } from "react";
 import Fotter from "./components/Header/Footter";
 

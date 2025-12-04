@@ -78,15 +78,11 @@ export default function Products({ count, setCount }) {
     },
   ];
 
-  // const addToCart = () => {
-  //     setCount(count + 1)
-  // }
-
   return (
     <div className="container mx-auto px-3 sm:px-1">
       <div className="gap-3 sm:gap- grid grid-cols-2 sm:grid-cols-4 sm:mt-16 mt-12">
         {Products.map((product) => (
-          <div className="bg-gray-800 items-center rounded-lg overflow-hidden xs:h-100">
+          <div key={product.id} className="bg-gray-800 items-center rounded-lg overflow-hidden xs:h-100">
             <img
               className="w-full h-40 sm:h-50 object-cover hover:scale-110 transition-all duration-500 group-hover:translate-y-2 group-hover:scale-110 "
               src={product.images}

@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 export default function Cart() {
   const [cartProducts, setCartProducts] = useState([]);
@@ -31,12 +29,11 @@ export default function Cart() {
   const deleteProduct = (index) => {
     const updated = [...cartProducts];
     updated.splice(index, 1);
-    setCartProducts(updated)
-    localStorage.setItem("cart", JSON.stringify(updated))
-    
+    setCartProducts(updated);
+    localStorage.setItem("cart", JSON.stringify(updated));
+
     console.log(deleteProduct);
-  }  
-  
+  };
 
   return (
     <div className="p-6 container mx-auto flex flex-col lg:flex-row gap-6">
@@ -79,7 +76,6 @@ export default function Cart() {
                 </div>
               </div>
 
-              {/* <div> */}
               <div className="flex items-center gap-2 mt-2">
                 <button
                   onClick={() => updateQuantity(index, "decrement")}
@@ -98,7 +94,6 @@ export default function Cart() {
                 </button>
               </div>
             </div>
-            // </div>
           ))
         )}
       </div>
